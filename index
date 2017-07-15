@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS GRID</title>
+
+    <style>
+
+	    * {
+	    	box-sizing: border-box;
+	    }
+
+	    body{
+	    	margin: 0;
+	    	padding: 0;
+	    	font-family: sans-serif;
+	    }
+
+		.grid-container{
+			/*  display: grid | inline-grid | subgrid  */
+			display: grid;
+			grid-template-columns: repeat(3,33.3333%);
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 50px 75px;
+		}
+
+		.grid-item{
+			background-color: #d3d3d3;
+		}
+
+		.header{
+			grid-area: header;
+			background-color: #dedede;
+		}
+		.sidebar{
+			grid-area: sidebar;
+			background-color: #f3f3f3;
+		}
+		.content{
+			grid-area: content;
+			background-color: #ebbeeb;
+		}
+		.footer{
+			grid-area: footer;
+			background-color: #464646;
+		}
+		.wrapper{
+			display: grid;
+
+			grid-template-columns: repeat(3, 33.3333%);
+			grid-template-rows: 50px 200px 50px;
+			grid-template-areas: "header header header"
+								 "sidebar content content"
+								 "footer footer footer"
+		}
+
+		.type-1{
+			display: grid;
+
+		}
+    </style>
+</head>
+<body>
+
+
+<h2>GRID Layout examples</h2>
+<hr>
+
+<div class="grid-container">
+	<div class="grid-item">1</div>
+	<div class="grid-item">2</div>
+	<div class="grid-item">3</div>
+	<div class="grid-item">4</div>
+	<div class="grid-item">5</div>
+	<div class="grid-item">6</div>
+</div>
+
+<h2>GRID areas</h2>
+<hr>
+
+<div class="wrapper">
+	<header class="header"></header>
+	<div class="content"></div>
+	<div class="sidebar"></div>
+	<footer class="footer"></footer>
+</div>
+
+<h2>GRID-gap</h2>
+<hr>
+
+<div class="type-1">
+	<div class="grid-item">1</div>
+	<div class="grid-item">2</div>
+	<div class="grid-item">3</div>
+	<div class="grid-item">4</div>
+	<div class="grid-item">5</div>
+	<div class="grid-item">6</div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
