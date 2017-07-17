@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS GRID</title>
-
     <style>
-
 	    * {
 	    	box-sizing: border-box;
 	    }
@@ -15,7 +13,11 @@
 	    	padding: 0;
 	    	font-family: sans-serif;
 	    }
-
+		.container{
+			max-width: 1170px;
+			margin: auto;
+			margin-bottom: 150px;
+		}
 		.grid-container{
 			/*  display: grid | inline-grid | subgrid  */
 			display: grid;
@@ -56,49 +58,56 @@
 
 		.type-1{
 			display: grid;
+			grid-template-columns: repeat(3, 100px);
+			grid-template-rows: 100px;
 
+			/*grid-column-gap: 10px;
+ 			grid-row-gap: 15px;*/
+			
+			grid-gap: 10px 15px;
 		}
     </style>
 </head>
 <body>
 
+<div class="container">
 
-<h2>GRID Layout examples</h2>
-<hr>
+	<h2>GRID Layout examples</h2>
+	<hr>
 
-<div class="grid-container">
-	<div class="grid-item">1</div>
-	<div class="grid-item">2</div>
-	<div class="grid-item">3</div>
-	<div class="grid-item">4</div>
-	<div class="grid-item">5</div>
-	<div class="grid-item">6</div>
+	<div class="grid-container">
+		<div class="grid-item">1</div>
+		<div class="grid-item">2</div>
+		<div class="grid-item">3</div>
+		<div class="grid-item">4</div>
+		<div class="grid-item">5</div>
+		<div class="grid-item">6</div>
+	</div>
+
+	<h2>GRID areas</h2>
+	<hr>
+
+	<div class="wrapper">
+		<header class="header"></header>
+		<div class="content"></div>
+		<div class="sidebar"></div>
+		<footer class="footer"></footer>
+	</div>
+
+	<h2>GRID-gap</h2>
+	<hr>
+
+	<div class="type-1">
+		<div class="grid-item">1</div>
+		<div class="grid-item">2</div>
+		<div class="grid-item">3</div>
+		<div class="grid-item">4</div>
+		<div class="grid-item">5</div>
+		<div class="grid-item">6</div>
+	</div>
+
+
 </div>
-
-<h2>GRID areas</h2>
-<hr>
-
-<div class="wrapper">
-	<header class="header"></header>
-	<div class="content"></div>
-	<div class="sidebar"></div>
-	<footer class="footer"></footer>
-</div>
-
-<h2>GRID-gap</h2>
-<hr>
-
-<div class="type-1">
-	<div class="grid-item">1</div>
-	<div class="grid-item">2</div>
-	<div class="grid-item">3</div>
-	<div class="grid-item">4</div>
-	<div class="grid-item">5</div>
-	<div class="grid-item">6</div>
-</div>
-
-
-
 
 
 
